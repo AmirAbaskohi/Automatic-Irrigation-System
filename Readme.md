@@ -1,6 +1,8 @@
 # Automatic Irrigation system wih Arduino uno
 
 This is implementation of automatic irrigation system with `Arduino uno`.
+![image](https://user-images.githubusercontent.com/50926437/166109494-8515fe6d-0fd3-4cfc-a81b-1d1a85b408b8.png)
+
 
 ## Prerequisites
 

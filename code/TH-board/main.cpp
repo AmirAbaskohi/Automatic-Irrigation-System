@@ -24,12 +24,8 @@ int dc_pinA = 9;
 int dc_pinB = 10;
 long double last_tick;
 
-//SoftwareSerial bluetooth(BLUETOOTH_RX ,BLUETOOTH_TX);
-
 void setup() {
   Wire.begin();
-  //pinMode(BLUETOOTH_RX,INPUT);
-  //pinMode(BLUETOOTH_TX,OUTPUT);
   pinMode(dc_pinA,OUTPUT);
   pinMode(dc_pinB,OUTPUT);
   Serial.setTimeout(0);
@@ -69,15 +65,6 @@ float getHumidity(){
 }
 
 void handlePWM(){
-//  pwm_counter = (pwm_counter + 1) % (PWM_MAX - PWM_MIN);
-//  if (pwm_counter < pwm_velocity){
-//    digitalWrite(dc_pinA,LOW);
-//    digitalWrite(dc_pinB,HIGH);
-//  }
-//  else {
-//    digitalWrite(dc_pinA,LOW);
-//    digitalWrite(dc_pinB,LOW);
-//  }
     analogWrite(dc_pinA, pwm_velocity);
     digitalWrite(dc_pinB,0);
 }

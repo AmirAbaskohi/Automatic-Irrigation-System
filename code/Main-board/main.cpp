@@ -24,7 +24,6 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 
 void setup() {
-  // put your setup code here, to run once:
   lcd.begin(20,4);
   pinMode(dc_pinA,OUTPUT);
   pinMode(dc_pinB,OUTPUT);
@@ -51,18 +50,6 @@ void updateVelocity(){
       decision = "0/100DC 20<H<50&T<25";
       pwm_velocity = 0;
     }
-  }
-}
-
-void handlePWM(){
-  pwm_counter = (pwm_counter + 1) % (PWM_MAX - PWM_MIN);
-  if (pwm_counter < pwm_velocity){
-    digitalWrite(dc_pinA,HIGH);
-    digitalWrite(dc_pinB,LOW);
-  }
-  else {
-    digitalWrite(dc_pinA,LOW);
-    digitalWrite(dc_pinB,LOW);
   }
 }
 
